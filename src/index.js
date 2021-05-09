@@ -1,18 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { GoodMorning } from "./children/GoodMorning";
 
 //рендерится страница 1 раз
 //для перерендеринга конкретного элемента нужно к нему обратиться
-function HelloTimer() {
-  const hello = <h1>Hello, {new Date().toLocaleTimeString()}</h1>;
 
-  ReactDOM.render(hello, document.getElementById("root"));
-}
+const name = 'Sasha';
+ReactDOM.render(React.createElement(GoodMorning, {name 
+  // или name: name
+}), document.getElementById("root"));
 
-setInterval(HelloTimer, 1000);
+
+//setInterval(App, 1000);
 
 // ReactDOM.render(
 //   <React.StrictMode>
